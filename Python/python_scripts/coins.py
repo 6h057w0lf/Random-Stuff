@@ -4,7 +4,7 @@ import random
 class Coin:
     def __init__(self, rare = False, clean = True, heads = True, **kwargs):
 
-        for key,value in kewargs.items():
+        for key,value in kwargs.items():
             setattr(self,key,value)
 
         
@@ -13,7 +13,7 @@ class Coin:
         self.heads = heads
 
         if self.is_rare:
-            self.value = slef.original_value * 1.25
+            self.value = self.original_value * 1.25
         else:
             self.value = self.original_value
 
